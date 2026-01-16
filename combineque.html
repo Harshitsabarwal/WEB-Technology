@@ -1,0 +1,114 @@
+<html>
+<html>
+<head>
+    <title>Form Table</title>
+    <style>
+        table, tr, td, th {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        .middle {
+            background-color:pink;
+        }
+        .middle a {
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            color: black;
+        }
+        .middle a:hover {
+            background-color: pink;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color:pink;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+            margin-left: 90px;
+        }
+        li a {
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            color: black;
+        }
+        li a:hover {
+            background-color: pink;
+        }
+        .top {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th colspan="2" class="top">
+                <img src="got.jpg" alt="Image" width="100">
+                <p>This is the Image of GOT</p>
+            </th>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="3" class="middle">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                <iframe src="abc.html" height="200" width="300"></iframe>
+            
+            </td>
+            <td>
+                <form action="/Submit" method="Post">
+                    <p>First name</p>
+                    <input placeholder = "Harshit" type="text" name="First name" readonly>
+                    <p>Last Name</p>
+                    <input placeholder="Sabarwal" type= "text" name="Last name">
+                    <br><br>
+                    <label for="male">Male</label>
+                    <input type = "Radio" name="Gender" Value="Male"></input>
+                    <label for="female">Female</label>
+                    <input type="Radio" name="Gender" Value="Female"></input>
+                    <p>Password</p>
+                    <input type= "Password" name="Password">
+                    <p>Select Date</p>
+                    <input type="Date" Min="1980-12-01" Max="2000-12-31">
+                    <br><br>
+                    <button>Submit</button>
+                </form>
+            </td>
+            <td>
+                    <iframe src="abc.html" height="200" width="300"></iframe>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
