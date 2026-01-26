@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    height: 70px;
+    background-color: #2c2c54;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.webname {
+    font-size: 20px;
+}
+
+/* Sub Menu */
+.submenu {
+    background-color: #40407a;
+    text-align: center;
+    padding: 12px;
+}
+
+.submenu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    text-decoration: underline;
+}
+
+/* Content */
+.content {
+    background-color: #f1f1f1;
+    padding: 30px;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+    width: 300px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.row {
+    margin-bottom: 12px;
+}
+
+.row label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.row input {
+    width: 100%;
+    padding: 6px;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #2c2c54;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Background Image */
+.background {
+    height: 200px;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 80px;
+}

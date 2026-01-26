@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+</head>
+<body>
+
+<h2>User Registration Form</h2>
+
+<form action="#" method="post">
+
+    <label>Username:</label><br>
+    <input type="text" name="Harshit" required minlength="4" placeholder="Enter username">
+    <br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required minlength="6" placeholder="Enter password">
+    <br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required placeholder="Enter email">
+    <br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob" required>
+    <br><br>
+
+    <label>Father’s Name:</label><br>
+    <input type="text" name="father_name" required>
+    <br><br>
+
+    <label>Aadhar Number:</label><br>
+    <input type="text" name="aadhar"
+           pattern="[0-9]{12}"
+           required
+           placeholder="12-digit Aadhar number">
+    <br><br>
+
+    <label>Address:</label><br>
+    <textarea name="address" rows="4" cols="30" required></textarea>
+    <br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>

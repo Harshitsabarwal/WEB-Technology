@@ -1,0 +1,31 @@
+<html>
+<head>
+<style> </style>
+</head>
+<body>
+body{
+	margin:10px;
+.Div1
+{
+border:1px solid;
+height: 100%;
+width: 100%;
+}
+.Div2{
+	border:1px solid;
+	height:20%;
+	width:100%;
+}
+.Div3 img{
+	border: 1px solid;
+	height: 100%;
+	width: 30%;
+}
+.Div4{
+	border: 1px solid;
+	height:100%;
+	width:70%;
+	float:right;
+}
+</body>
+</html>

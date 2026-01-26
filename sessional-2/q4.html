@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Position Properties</title>
+    <style>
+        body{
+            height:1500px;
+            font-family: Arial;
+        }
+
+        /* Static */
+        .static-box{
+            position: static;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        /* Relative */
+        .relative-box{
+            position: relative;
+            top: 20px;
+            left: 30px;
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        /* Absolute */
+        .absolute-box{
+            position: absolute;
+            top: 300px;
+            right: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            border: 2px solid black;
+        }
+
+        /* Fixed */
+        .fixed-box{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: lightyellow;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="static-box">
+        Position: Static
+    </div>
+
+    <div class="relative-box">
+        Position: Relative
+    </div>
+
+    <div class="absolute-box">
+        Position: Absolute
+    </div>
+
+    <div class="fixed-box">
+        Position: Fixed
+    </div>
+
+</body>
+</html>

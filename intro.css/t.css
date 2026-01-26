@@ -1,0 +1,17 @@
+body
+{
+	padding:10px;
+	margin:10px;
+}
+.head
+{
+border: 1px solid Green;
+Height: 100%;
+width:50%;
+}
+.header{
+	background-color:pink;
+}
+.para{
+	background-color:blue;
+}

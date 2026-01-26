@@ -1,0 +1,97 @@
+body{
+    margin:100px;
+}
+
+.bt{
+    font-size:15px;
+    background-color:pink;
+    border:none;
+    border-radius:15px;
+    padding:10px 10px;
+    cursor:pointer;
+    color:#fff;
+    box-shadow:0 2px #666;
+}
+
+.bt:active{
+    box-shadow:0 2px #666;
+    transform:translateY(2px);
+}
+body{
+    font-family:Arial;
+    background-color:#f2f2f2;
+}
+
+.title{
+    text-align:center;
+    margin-top:40px;
+}
+
+
+.login-box{
+    width:300px;
+    margin:30px auto;
+    padding:20px;
+    border:2px solid black;
+    background-color:#E6F2FF;
+    text-align:center;
+}
+
+.login-box label{
+    display:block;
+    margin-top:15px;
+}
+
+.login-box input{
+    width:90%;
+    padding:6px;
+    margin-top:5px;
+}
+
+.login-box button{
+    margin-top:20px;
+    padding:2px 8px;
+    cursor:pointer;
+}
+
+.bt{
+    background-color:red;
+    color:white;
+    border:none;
+    margin-left:10px;
+}
+.sub {
+	font-size:20px;
+    background-color:gray;
+    border:none;
+    border-radius:15px;
+    padding:10px 10px;
+    cursor:pointer;
+    color:#fff;
+    box-shadow:0 2px #666;
+}
+
+.update-password{
+    width:300px;
+    margin:30px auto;
+    padding:20px;
+    border:2px solid black;
+    background-color:#E6F2FF;
+    text-align:center;
+}
+.update-password label{
+    display:block;
+    margin-top:15px;
+}
+
+.update-password input{
+    width:90%;
+    padding:6px;
+    margin-top:5px;
+}
+
+.update-password button{
+    margin-top:20px;
+    padding:2px 8px;
+    cursor:pointer;
+}

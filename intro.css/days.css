@@ -1,0 +1,28 @@
+<html>
+    <head>
+	<title> horizontal line </ title>
+	<link rel="stylesheet" href="days.css"/>
+	</head>
+	<body>
+
+			
+			ul
+          	{
+          		list-style-type: none;
+          		margin:0px;
+          		padding:0px;
+          		background-color:Red;
+          		overflow:hidden;
+          	}
+          	li{
+          		float:left;
+          	}
+          	li a {
+          		text decoration: none;
+          		padding:10px;
+          		display:block;
+          		color:black;
+          	}
+          	li a:hover{
+          		background-color:yellow;
+          	}
