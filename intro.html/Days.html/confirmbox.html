@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function my() {
+    var a;
+    if (confirm("Press any button")) {
+        a = "You pressed OK";
+    } else {
+        a = "You pressed Cancel";
+    }
+    document.getElementById("b").innerHTML = a;
+}
+</script>
+</head>
+
+<body>
+
+<button onclick="my()">Click Me</button>
+
+<p id="b"></p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Mouse Event</title>
+</head>
+
+<body>
+
+<div id="msg">Move mouse here</div>
+
+<script>
+let b = document.getElementById("msg");
+
+b.addEventListener("mouseover", function() {
+    b.innerHTML = "Mouse Entered";
+});
+
+b.addEventListener("mouseout", function() {
+    b.innerHTML = "Mouse Left";
+});
+</script>
+
+</body>
+</html>

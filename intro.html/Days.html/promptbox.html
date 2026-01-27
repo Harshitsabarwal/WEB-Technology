@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function my() {
+    let t;
+    let P = prompt("Enter your code", "");
+
+    if (P == null || P == "") {
+        t = "You did not enter the code";
+    } el se {
+        t = "You entered the code";
+    }
+
+    document.getElementById("msg").innerHTML = t;
+}
+</script>
+</head>
+
+<body>
+
+<button onclick="my()">Click Me</button>
+
+<p id="msg"></p>
+
+</body>
+</html>
