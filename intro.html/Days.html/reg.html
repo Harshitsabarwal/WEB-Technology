@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>User Registration Form</title>
+
+    <script>
+        var cap = "";
+
+        function generateCaptcha() {
+            var char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            cap = "";
+            for (var i = 0; i < 6; i++) {
+                cap += char.charAt(Math.floor(Math.random() * char.length));
+            }
+            document.getElementById("cap").value = cap;
+        }
+
+        function val() {
+            var username = document.reg.username.value;
+            var password = document.reg.password.value;
+            var email = document.reg.email.value;
+            var dob = document.reg.dob.value;
+            var mobile = document.reg.mobile.value;
+            var aadhar = document.reg.aadhar.value;
+            var address = document.reg.address.value;
+            var userCaptcha = document.reg.usercap.value;
+
+            if (username == "") {
+                alert("Username cannot be empty");
+                return false;
+            }
+            else if (password == "" || password.length <= 10) {
+                alert("Password must be more than 10 characters");
+                return false;
+            }
+            else if (email == "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+            else if (dob == "") {
+                alert("Date of Birth cannot be empty");
+                return false;
+            }
+            else if (mobile.length != 10 || isNaN(mobile)) {
+                alert("Mobile number must be 10 digits");
+                return false;
+            }
+            else if (aadhar.length != 12 || isNaN(aadhar)) {
+                alert("Aadhar number must be 12 digits");
+                return false;
+            }
+            else if (address == "") {
+                alert("Address cannot be empty");
+                return false;
+            }
+            else if (userCaptcha == "") {
+                alert("Enter captcha");
+                return false;
+            }
+            else if (userCaptcha != cap) {
+                alert("Captcha does not match");
+                generateCaptcha();
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+
+<body onload="generateCaptcha()">
+
+<h2>User Registration Form</h2>
+
+<form name="reg" action="login.html" method="post" onsubmit="return val()">
+
+    Username:<br>
+    <input type="text" name="username"><br><br>
+
+    Password:<br>
+    <input type="password" name="password"><br><br>
+
+    Email:<br>
+    <input type="email" name="email"><br><br>
+
+    DOB:<br>
+    <input type="date" name="dob"><br><br>
+
+    Mobile:<br>
+    <input type="text" name="mobile"><br><br>
+
+    Aadhar:<br>
+    <input type="text" name="aadhar"><br><br>
+
+    Address:<br>
+    <textarea name="address"></textarea><br><br>
+
+    <!-- CAPTCHA -->
+    Captcha:<br>
+    <input type="text" id="cap" readonly>
+    <button type="button" onclick="generateCaptcha()">Refresh</button><br><br>
+
+    Enter Captcha:<br>
+    <input type="text" name="usercap"><br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
