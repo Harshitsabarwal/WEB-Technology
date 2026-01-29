@@ -1,6 +1,73 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>User Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #cce6ff, #e6f2ff);
+        }
+
+        .box {
+            width: 420px;
+            background: white;
+            padding: 25px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .captcha-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 8px;
+            background: #0059b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #003d80;
+        }
+
+        input[type="submit"] {
+            background: green;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: darkgreen;
+        }
+    </style>
 
     <script>
         var cap = "";
@@ -15,48 +82,41 @@
         }
 
         function val() {
-            var username = document.reg.username.value;
-            var password = document.reg.password.value;
-            var email = document.reg.email.value;
-            var dob = document.reg.dob.value;
-            var mobile = document.reg.mobile.value;
-            var aadhar = document.reg.aadhar.value;
-            var address = document.reg.address.value;
-            var userCaptcha = document.reg.usercap.value;
+            var f = document.reg;
 
-            if (username == "") {
+            if (f.username.value == "") {
                 alert("Username cannot be empty");
                 return false;
             }
-            else if (password == "" || password.length <= 10) {
+            if (f.password.value == "" || f.password.value.length <= 10) {
                 alert("Password must be more than 10 characters");
                 return false;
             }
-            else if (email == "") {
+            if (f.email.value == "") {
                 alert("Email cannot be empty");
                 return false;
             }
-            else if (dob == "") {
+            if (f.dob.value == "") {
                 alert("Date of Birth cannot be empty");
                 return false;
             }
-            else if (mobile.length != 10 || isNaN(mobile)) {
+            if (f.mobile.value.length != 10 || isNaN(f.mobile.value)) {
                 alert("Mobile number must be 10 digits");
                 return false;
             }
-            else if (aadhar.length != 12 || isNaN(aadhar)) {
+            if (f.aadhar.value.length != 12 || isNaN(f.aadhar.value)) {
                 alert("Aadhar number must be 12 digits");
                 return false;
             }
-            else if (address == "") {
+            if (f.address.value == "") {
                 alert("Address cannot be empty");
                 return false;
             }
-            else if (userCaptcha == "") {
+            if (f.usercap.value == "") {
                 alert("Enter captcha");
                 return false;
             }
-            else if (userCaptcha != cap) {
+            if (f.usercap.value != cap) {
                 alert("Captcha does not match");
                 generateCaptcha();
                 return false;
@@ -70,42 +130,44 @@
 
 <body onload="generateCaptcha()">
 
-<h2>User Registration Form</h2>
+<div class="box">
+    <h2>User Registration</h2>
 
-<form name="reg" action="login.html" method="post" onsubmit="return val()">
+    <form name="reg" action="login.html" onsubmit="return val()">
 
-    Username:<br>
-    <input type="text" name="username"><br><br>
+        <label>Username</label>
+        <input type="text" name="username">
 
-    Password:<br>
-    <input type="password" name="password"><br><br>
+        <label>Password</label>
+        <input type="password" name="password">
 
-    Email:<br>
-    <input type="email" name="email"><br><br>
+        <label>Email</label>
+        <input type="email" name="email">
 
-    DOB:<br>
-    <input type="date" name="dob"><br><br>
+        <label>Date of Birth</label>
+        <input type="date" name="dob">
 
-    Mobile:<br>
-    <input type="text" name="mobile"><br><br>
+        <label>Mobile Number</label>
+        <input type="text" name="mobile">
 
-    Aadhar:<br>
-    <input type="text" name="aadhar"><br><br>
+        <label>Aadhar Number</label>
+        <input type="text" name="aadhar">
 
-    Address:<br>
-    <textarea name="address"></textarea><br><br>
+        <label>Address</label>
+        <textarea name="address" rows="3"></textarea>
 
-    <!-- CAPTCHA -->
-    Captcha:<br>
-    <input type="text" id="cap" readonly>
-    <button type="button" onclick="generateCaptcha()">Refresh</button><br><br>
+        <label>Captcha</label>
+        <div class="captcha-box">
+            <input type="text" id="cap" readonly>
+            <button type="button" onclick="generateCaptcha()">↻</button>
+        </div>
 
-    Enter Captcha:<br>
-    <input type="text" name="usercap"><br><br>
+        <label>Enter Captcha</label>
+        <input type="text" name="usercap">
 
-    <input type="submit" value="Register">
-
-</form>
+        <input type="submit" value="Register">
+    </form>
+</div>
 
 </body>
 </html>

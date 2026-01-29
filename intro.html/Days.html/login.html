@@ -1,27 +1,86 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #fff0e6, #ffe6cc);
+        }
+
+        .box {
+            width: 350px;
+            background: white;
+            padding: 25px;
+            margin: 80px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #cc5200;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-login {
+            background: orange;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-login:hover {
+            background: darkorange;
+        }
+
+        .btn-forgot {
+            background: #666;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-forgot:hover {
+            background: #444;
+        }
+    </style>
 </head>
 
 <body>
 
-<h2>Login Form</h2>
+<div class="box">
+    <h2>Student Login</h2>
 
-<form>
+    <form>
 
-    Username:<br>
-    <input type="text" name="username"><br><br>
+        <label>Username</label>
+        <input type="text" name="username">
 
-    Email ID:<br>
-    <input type="email" name="email"><br><br>
+        <label>Email ID</label>
+        <input type="email" name="email">
 
-    Password:<br>
-    <input type="password" name="password"><br><br>
-	
-     <input type="submit" value="Forgot password"><br><br>
-    <input type="submit" value="Login">
+        <label>Password</label>
+        <input type="password" name="password">
 
-</form>
+        <input type="submit" value="Forgot Password" class="btn-forgot">
+
+        <input type="submit" value="Login" class="btn-login">
+    </form>
+</div>
 
 </body>
 </html>
